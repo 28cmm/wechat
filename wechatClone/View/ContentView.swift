@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct ContentView: View {
     var body: some View {
@@ -18,6 +19,8 @@ let WIDTH9 = UIScreen.main.bounds.width/9
 struct LoginView:View{
     @State var userTF = ""
     @State var passwordTF = ""
+
+    @StateObject var loginVM = LoginViewModel()
     var body: some View{
         VStack(){
 
@@ -50,11 +53,31 @@ struct LoginView:View{
                 Text("Log in")
                     .foregroundColor(.white)
             }
-//            .disabled(userTF)
             .frame(maxWidth:.infinity)
             .padding(.vertical,20)
             .background(Color.green)
             .cornerRadius(7)
+
+            SignInWithAppleButton { (request) in
+                loginVM.nonce = randomNonceString()
+                request.requestedScopes = [.email, .fullName]
+                request.nonce = sha256(loginVM.nonce)
+            } onCompletion: { (result) in
+                switch result{
+                case .success(let user):
+                    print("Success")
+                    guard let credential = user.credential as? ASAuthorizationAppleIDCredential else{
+                        print("err with firebase")
+                        return
+                    }
+                    loginVM.authenticate(credential: credential)
+                //do logi with Firebase
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            .signInWithAppleButtonStyle(.black)
+            .frame(height:55)
 
             Spacer()
             HStack{
@@ -72,7 +95,25 @@ struct LoginView:View{
             .frame(height:HEIGHT9)
 
 
+
         }
+        .padding()
+    }
+}
+
+
+
+struct homeView:View{
+    var body: some View{
+        Button(action:{FireBase.shared.logoOut()}){
+            Text("Log Out")
+                .foregroundColor(.white)
+        }
+//            .disabled(userTF)
+        .frame(maxWidth:.infinity)
+        .padding(.vertical,20)
+        .background(Color.gray)
+        .cornerRadius(7)
         .padding()
     }
 }

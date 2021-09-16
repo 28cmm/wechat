@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,14 @@
 		28D3B33C26F29DEE004D6C17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3B33B26F29DEE004D6C17 /* ContentView.swift */; };
 		28D3B33E26F29DF2004D6C17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D3B33D26F29DF2004D6C17 /* Assets.xcassets */; };
 		28D3B34126F29DF2004D6C17 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28D3B34026F29DF2004D6C17 /* Preview Assets.xcassets */; };
+		28D3B34926F3B23D004D6C17 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3B34826F3B23C004D6C17 /* LoginViewModel.swift */; };
+		28D3B34E26F3B41A004D6C17 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28D3B34D26F3B419004D6C17 /* GoogleService-Info.plist */; };
+		28D3B35126F3B573004D6C17 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 28D3B35026F3B573004D6C17 /* FirebaseStorage */; };
+		28D3B35326F3B573004D6C17 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 28D3B35226F3B573004D6C17 /* FirebaseAuth */; };
+		28D3B35526F3B573004D6C17 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 28D3B35426F3B573004D6C17 /* FirebaseFirestore */; };
+		28D3B35726F3B573004D6C17 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 28D3B35626F3B573004D6C17 /* FirebaseDatabase */; };
+		28D3B35926F3B64B004D6C17 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3B35826F3B64B004D6C17 /* Firebase.swift */; };
+		28D3B35B26F3B7C8004D6C17 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3B35A26F3B7C8004D6C17 /* Member.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,11 @@
 		28D3B33D26F29DF2004D6C17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28D3B34026F29DF2004D6C17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		28D3B34226F29DF2004D6C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D3B34826F3B23C004D6C17 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		28D3B34D26F3B419004D6C17 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		28D3B35826F3B64B004D6C17 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		28D3B35A26F3B7C8004D6C17 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		28D3B35C26F3B9A2004D6C17 /* wechatClone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wechatClone.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +40,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D3B35126F3B573004D6C17 /* FirebaseStorage in Frameworks */,
+				28D3B35326F3B573004D6C17 /* FirebaseAuth in Frameworks */,
+				28D3B35726F3B573004D6C17 /* FirebaseDatabase in Frameworks */,
+				28D3B35526F3B573004D6C17 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,9 +69,13 @@
 		28D3B33826F29DED004D6C17 /* wechatClone */ = {
 			isa = PBXGroup;
 			children = (
-				28D3B33926F29DEE004D6C17 /* wechatCloneApp.swift */,
-				28D3B33B26F29DEE004D6C17 /* ContentView.swift */,
+				28D3B35C26F3B9A2004D6C17 /* wechatClone.entitlements */,
+				28D3B34C26F3B252004D6C17 /* View */,
+				28D3B34B26F3B24B004D6C17 /* Model */,
+				28D3B34A26F3B245004D6C17 /* ViewModel */,
+				28D3B34D26F3B419004D6C17 /* GoogleService-Info.plist */,
 				28D3B33D26F29DF2004D6C17 /* Assets.xcassets */,
+				28D3B33926F29DEE004D6C17 /* wechatCloneApp.swift */,
 				28D3B34226F29DF2004D6C17 /* Info.plist */,
 				28D3B33F26F29DF2004D6C17 /* Preview Content */,
 			);
@@ -67,6 +88,31 @@
 				28D3B34026F29DF2004D6C17 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		28D3B34A26F3B245004D6C17 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				28D3B34826F3B23C004D6C17 /* LoginViewModel.swift */,
+				28D3B35826F3B64B004D6C17 /* Firebase.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		28D3B34B26F3B24B004D6C17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28D3B35A26F3B7C8004D6C17 /* Member.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		28D3B34C26F3B252004D6C17 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28D3B33B26F29DEE004D6C17 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +131,12 @@
 			dependencies = (
 			);
 			name = wechatClone;
+			packageProductDependencies = (
+				28D3B35026F3B573004D6C17 /* FirebaseStorage */,
+				28D3B35226F3B573004D6C17 /* FirebaseAuth */,
+				28D3B35426F3B573004D6C17 /* FirebaseFirestore */,
+				28D3B35626F3B573004D6C17 /* FirebaseDatabase */,
+			);
 			productName = wechatClone;
 			productReference = 28D3B33626F29DED004D6C17 /* wechatClone.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 28D3B32D26F29DED004D6C17;
+			packageReferences = (
+				28D3B34F26F3B573004D6C17 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 28D3B33726F29DED004D6C17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D3B34126F29DF2004D6C17 /* Preview Assets.xcassets in Resources */,
+				28D3B34E26F3B41A004D6C17 /* GoogleService-Info.plist in Resources */,
 				28D3B33E26F29DF2004D6C17 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,7 +195,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D3B33C26F29DEE004D6C17 /* ContentView.swift in Sources */,
+				28D3B34926F3B23D004D6C17 /* LoginViewModel.swift in Sources */,
+				28D3B35926F3B64B004D6C17 /* Firebase.swift in Sources */,
 				28D3B33A26F29DEE004D6C17 /* wechatCloneApp.swift in Sources */,
+				28D3B35B26F3B7C8004D6C17 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = wechatClone/wechatClone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"wechatClone/Preview Content\"";
 				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
@@ -289,6 +349,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = wechatClone/wechatClone.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"wechatClone/Preview Content\"";
 				DEVELOPMENT_TEAM = XX8BFQJ7RJ;
@@ -328,6 +389,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		28D3B34F26F3B573004D6C17 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		28D3B35026F3B573004D6C17 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28D3B34F26F3B573004D6C17 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		28D3B35226F3B573004D6C17 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28D3B34F26F3B573004D6C17 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		28D3B35426F3B573004D6C17 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28D3B34F26F3B573004D6C17 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		28D3B35626F3B573004D6C17 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28D3B34F26F3B573004D6C17 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 28D3B32E26F29DED004D6C17 /* Project object */;
 }
